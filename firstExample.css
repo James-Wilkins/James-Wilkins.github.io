@@ -7,7 +7,8 @@
 multi line comment */
 
 /* CSS files can can also be used to access e.g. fonts */
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+</style>
 
 /* Format my paragraph */
 p {
@@ -19,8 +20,8 @@ p {
 
 /* Format my heading */
 h1 {
-	font-family: "Catamaran";
-	font-variant: small-caps;
+	font-family: "Inter";
+	font-variant: Light 300;
 	font-size: 60px;
 	color: #320064;
 	font-weight: 900;
