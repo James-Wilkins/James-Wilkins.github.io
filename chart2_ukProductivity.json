@@ -13,7 +13,7 @@
   },
   
   "data": {
-    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/ukMacro/GI4.DataHub.GrowthInnovationOutputperHour.csv"},
+    "url": "https://www.alphavantage.co/query?function=TREASURY_YIELD&interval=monthly&maturity=10year&apikey=RN4KTU97DJ8KKLUZ"},
   "height": 300,
   "width": 345,
   "mark": {
