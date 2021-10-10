@@ -14,7 +14,7 @@
     
     "data": {
       "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=overview&metric=cumPeopleVaccinatedFirstDoseByPublishDate&format=json",
-      "format": {"type": "json", "property": "months"}
+      "format": {"type": "json"}
     },
     "height": 300,
     "width": 345,
