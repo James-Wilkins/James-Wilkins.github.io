@@ -25,51 +25,14 @@
 
 <body>
 
-    <h1>Data Science 2021.</h1>
+    <h1>James Wilkins' Data Science Project 2021.</h1>
 
-    <h3>Covid-19</h3>
+    <h3>'The changing relationship between the macroeconomy and financial markets'</h3>
 
-    <p>The first chart tracks Covid-19 cases by UK region. You can use the drop down selectors to choose a region.</p>
-
-<!--Vega embed, with notes for what is going on-->
-<div class="chart" id="firstChart">
-
-  <script>
-    // Following the script tag we are using Javascript.
-    // One way to tell is to see how comments work...
-    // First job is to set the chart as a JS variable:
-    var myChart1 = "chart1_covidUKRegions.json";
-    // Now we simply insert it, using Vega's embed code:
-    // The embed function needs to be told the location, and what to put there. 
-    vegaEmbed('#firstChart', myChart1);
-  </script>
-
-</div>
-
-  <h3>Productivity puzzle</h3>
-
-  <p>My second chart looks at productivity in the UK</p>
-
-<div class="chart" id="secondChart">
-  <script>
-    var myChart2 = "chart2_ukProductivity.json";
-    vegaEmbed('#secondChart', myChart2);
-  </script>
-</div>
+    <p>Ever since the beginning of the COVID-19 pandemic, there has been an ever-growing disconnect between the real and financial economy. As unemployment soared
+       and GDP fell rapidly, stock markets soared as the Federal Reserve in the USA began to add to their balance sheets, with Financial indexes such as the Russel 2000
+       and SP500 soaring and rallying to record highs.
     
-  <h3>UK Unemployment</h3>
-    
-  <p>My third chart looks at unemployment in the UK</p>
-    
-
-<div class="chart" id="thirdChart">
-    <script>
-      var myChart3 = "chart3_ukunemployment.json";
-      vegaEmbed('#thirdChart', myChart3);
-    </script>
-  </div>
-    
-</body>
 
 
 </html>
