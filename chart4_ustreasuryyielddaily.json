@@ -13,26 +13,9 @@
     },
     
     "data": {
-      'use strict';
-      var request = require('request');
+     
       "url": "https://www.alphavantage.co/query?function=TREASURY_YIELD&interval=daily&maturity=10year&apikey=RN4KTU97DJ8KKLUZ",
       "format": {"type": "json", "property": "daily"}
-
-      request.get({
-    url: url,
-    json: true,
-    headers: {'User-Agent': 'request'}
-  }, (err, res, data) => {
-    if (err) {
-      console.log('Error:', err);
-    } else if (res.statusCode !== 200) {
-      console.log('Status:', res.statusCode);
-    } else {
-      // data is successfully parsed as a JSON object:
-      console.log(data);
-    }
-});
-
 
     },
     "height": 300,
