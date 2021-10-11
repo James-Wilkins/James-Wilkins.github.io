@@ -13,8 +13,8 @@
     },
     
     "data": {
-      "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=overview&metric=cumPeopleVaccinatedFirstDoseByPublishDate&format=json",
-      "format": {"type": "json"}
+      "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=overview&metric=cumPeopleVaccinatedFirstDoseByPublishDate&format=csv",
+      "format": {"type": "csv"}
     },
     "height": 300,
     "width": 345,
@@ -36,10 +36,9 @@
         }
       },
       "y": {
-        "field": "value",
+        "field": "cumPeopleVaccinatedFirstDoseByPublishDate",
         "type": "quantitative",
         "title": "",
         "axis": {"grid": false}
       }
-    }
-  }
+    }}
