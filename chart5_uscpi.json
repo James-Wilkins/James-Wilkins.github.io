@@ -1,5 +1,5 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
     "description": "US Inflation",
   
@@ -13,8 +13,8 @@
     },
     
     "data": {
-      "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/USACPIALLMINMEI.csv",
-      "format": {"type": "csv",}
+      "url": "USACPIALLMINMEI.csv",
+      "format": {"type": "csv"}
     },
     "height": 300,
     "width": 345,
@@ -26,7 +26,7 @@
     },
     "encoding": {
       "x": {
-        "field": "date",
+        "field": "DATE",
         "type": "temporal",
         "axis": {
           "title": null,
@@ -36,7 +36,7 @@
         }
       },
       "y": {
-        "field": "value",
+        "field": "USACPIALLMINMEI",
         "type": "quantitative",
         "title": "",
         "axis": {"grid": false}
