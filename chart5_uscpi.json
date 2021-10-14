@@ -1,1 +1,45 @@
-
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  
+    "description": "US Inflation",
+  
+     "title": {
+      "text": "US Inflation",
+      "subtitle":"Monthly CPI for all items in the USA",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+    "data": {
+      "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/USACPIALLMINMEI.csv",
+      "format": {"type": "csv",}
+    },
+    "height": 300,
+    "width": 345,
+    "mark": {
+      "type": "line",
+      "point": false,
+      "interpolate": "monotone",
+      "color": "green"
+    },
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {
+          "title": null,
+          "grid": false,
+          "labelSeparation": 10,
+          "ticks": false
+        }
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}
+      }
+    }
+  }
