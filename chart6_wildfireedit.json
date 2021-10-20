@@ -15,11 +15,11 @@
     
     "data": 
       {
-        "url": "https://raw.githubusercontent.com/James-Wilkns/James-Wilkins.github.io/wildfireedit.csv"},
+        "url": "wildfireedit.csv"},
   
     
     "height": 300,
-    "width": 235,
+    "width": 300,
     
     "mark": {
       "type": "bar",
