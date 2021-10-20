@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Gross Federal Debt",
+  
+     "title": {
+      "text": "Gross Federal Debt from 2012 to 2019",
+      "subtitle":"Annual Gross Federal Debt (Billions of Dollars) ",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+    "data": {"values":
+             [
+                 {"year":2012, "GFD":16050.9},
+                 {"year":2013, "GFD":16719.4},
+                 {"year":2014, "GFD":17794.5},
+                 {"year":2015, "GFD":18120.1},
+                 {"year":2016, "GFD":19539.5},
+                 {"year":2017, "GFD":20205.7},
+                 {"year":2018, "GFD":21462.3},
+                 {"year":2019, "GFD":22669.5}
+                  
+           
+             ]
+    },
+    
+    "height": 300,
+    "width": 300,
+    "mark": {
+      "type": "line",
+      "point": false,
+      "interpolate": "monotone",
+      "color": "turquoise"
+    },
+    "encoding": {
+      "x": {
+        "field": "year",
+        "type": "nominal",
+        "axis": {
+          "title": null,
+          "grid": false,
+          "labelSeparation": 10,
+          "ticks": false
+        }
+      },
+      "y": {
+        "field": "GFD",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}
+      }
+    }}
