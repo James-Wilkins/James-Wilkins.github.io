@@ -16,6 +16,9 @@
       "url": "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MARK&interval=5min&apikey=RN4KTU97DJ8KKLUZ&datatype=csv",
       "format": {"type": "csv"}
     },
+   
+    "height": 300,
+    "width": 300
 
     
 
