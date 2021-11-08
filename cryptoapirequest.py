@@ -13,8 +13,7 @@ for i in currency:
   
    URL = url_base.format(i)
    print(URL)
-   
-   data = requests.get(URL).json()
+
 
    fileName = "data_rate_"+str(i)+".json"
    print(fileName)
