@@ -1,76 +1,43 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "https://api.allorigins.win/raw?url=https://api.nomics.com/v1/volume/history?key=a5f6bdc7628462a323f7f92f0655fd8c21edb27b&start=2018-04-14T00%3A00%3A00Z&convert=USD.json"
+
+  "description": "",
+
+   "title": {
+    "text": "",
+    "subtitle":"",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
   },
-
+  
+  "data": {
+    "url": "https://api.allorigins.win/raw?url=https://api.nomics.com/v1/market-cap/history?key=a5f6bdc7628462a323f7f92f0655fd8c21edb27b&start=2018-04-14T00%3A00%3A00Z&.json"},
   "height": 300,
-  "width": 300,
-  "layer": [
-    {
-
-
-      "mark": {
-        "type": "point",
-        "filled": true
-      },
-      "encoding": {
-        "x": {
-          "field": "spot_volume",
-          "type": "quantitative"
-        },
-        "y": {
-          "field": "derivative_volume",
-          "type": "quantitative"
-          
-        }
+  "width": 345,
+  "mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "monotone",
+    "color": "blueviolet"
+  },
+  "encoding": {
+    "x": {
+      "field": "timestamp",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 20,
+        "ticks": false
       }
     },
-    {
-      "mark": {
-        "type": "line",
-        "color": "orange"
-      },
-      "transform": [
-        {
-          "regression": "spot_volume",
-          "on": "derivative_volume"
-        }
-      ],
-      "encoding": {
-        "x": {
-          "field": "spot_volume",
-          "type": "quantitative",
-          "scale":{"domain":[0,200000000000]}
-      
-        },
-        "y": {
-          "field": "derivative_volume",
-          "type": "quantitative",
-          "scale":{"domain":[0,200000000000]}
-          
-        }
-      }
-    },
-    {
-      "transform": [
-        {
-          "regression": "spot_volume",
-          "on": "derivative_volume",
-          "params": true
-        },
-        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
-      ],
-      "mark": {
-        "type": "text",
-        "color": "firebrick",
-        "x": "width",
-        "align": "right",
-        "y": -5
-      },
-      "encoding": {
-        "text": {"type": "nominal", "field": "R2"}
-      }
+    "y": {
+      "field": "market_cap",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false}
     }
-  ]
+  }
 }
