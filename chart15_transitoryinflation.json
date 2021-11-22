@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+   "title": {
+    "text": "1-Month Inflation Expectations",
+    "subtitle":"1-month inflation expectations of consumers from the University of Michigan (Source: FRED)",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+  "data": {
+    "url": "MICH.csv"},
+  "height": 300,
+  "width": 320,
+  "mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "monotone",
+    "color": "indianred"
+  },
+  "encoding": {
+    "x": {
+      "field": "DATE",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 20,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "MICH",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false}
+    }
+  }
+}
