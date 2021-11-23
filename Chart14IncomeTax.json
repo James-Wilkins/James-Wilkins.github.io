@@ -15,7 +15,7 @@
     
     "data": 
       {
-        "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/IncomeTax.csv"},
+        "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/IncomeTax2.csv"},
   
     
     "height": 300,
@@ -23,7 +23,7 @@
     
     "mark": {
       "type": "bar",
-      "color": "#b32d1c"
+      "color": "#b75ace"
     },
     
     "encoding": {
