@@ -33,7 +33,7 @@
         "type": "nominal",
         "sort": "y",
         "axis": {
-          "title": null,
+          "title": "Country",
           "grid": false,
           "ticks": false,
           "labelAngle": 45
@@ -47,7 +47,14 @@
         "title": "Income Tax(%)",
         "axis": {"grid": false}
         
-      }
+      },
+
+
+       "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Income_Tax", "type": "quantitative"}
+
+       ]
 
     }
   }
