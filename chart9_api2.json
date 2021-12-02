@@ -1,36 +1,23 @@
-
-   
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  
-    "description": "Cryptocurrency Volume",
-  
-     "title": {
-      "text": "Cryptocurrency volume",
-      "subtitle":"Crytpocurrency volume",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
-    },
-    
-    "data": {
-      "url": "https://api.allorigins.win/raw?url=https://api.nomics.com/v1/volume/history?key=a5f6bdc7628462a323f7f92f0655fd8c21edb27b&start=2018-04-14T00%3A00%3A00Z&end=2018-05-14T00%3A00%3A00Z&convert=USD",
-      "format": {"type": "json"}
-    },
-   
-   
-  "transform": [
-    
-  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Cryptocurrency Volume",
+  "title": {
+    "text": "Cryptocurrency volume",
+    "subtitle": "Crytpocurrency volume",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://api.allorigins.win/raw?url=https://api.nomics.com/v1/volume/history?key=a5f6bdc7628462a323f7f92f0655fd8c21edb27b&start=2018-04-14T00%3A00%3A00Z&end=2018-05-14T00%3A00%3A00Z&convert=USD",
+    "format": {"type": "json"}
+  },
+  "transform": [],
   "mark": {
     "type": "area",
-    "clip": true
-    "line": {
-    
-     
-      "color": "orange"
-    },
+    "clip":true,
+    "line": {"color": "orange"},
     "color": {
       "x1": 1,
       "y1": 1,
@@ -38,14 +25,8 @@
       "y2": 0,
       "gradient": "linear",
       "stops": [
-        {
-          "offset": 0,
-          "color": "white"
-        },
-        {
-          "offset": 1,
-          "color": "orange"
-        }
+        {"offset": 0, "color": "white"},
+        {"offset": 1, "color": "orange"}
       ]
     }
   },
@@ -53,11 +34,8 @@
     "x": {
       "field": "timestamp",
       "type": "temporal",
-      "scale": {"domain":[1573516800000,1637107200000]}
+      "scale": {"domain": [1573516800000, 1637107200000]}
     },
-    "y": {
-      "field": "derivative_volume",
-      "type": "quantitative"
-    }
+    "y": {"field": "derivative_volume", "type": "quantitative"}
   }
 }
