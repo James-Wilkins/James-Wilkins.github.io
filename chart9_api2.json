@@ -25,7 +25,10 @@
   ],
   "mark": {
     "type": "area",
+    "clip": true
     "line": {
+    
+     
       "color": "orange"
     },
     "color": {
