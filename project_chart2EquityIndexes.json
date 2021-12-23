@@ -1,1 +1,63 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
+
+    "description": "Chart that uses repeated layers to make multiple calls to an API",
+
+
+    "title": {
+      "text": "Global Post-Pandemic Equity Recovery and Rally",
+      "subtitle":"",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+
+    "height":300,
+    "width":270,
+
+    
+    "encoding": {
+      "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
+      "y": {"field": "close", "type": "quantitative", "title": null, "axis": {"grid": false}},
+      "color":{"field":"Country", "title":null, "legend":{"orient": "top-left"}}
+    },
+
+
+
+    "layer": [
+      
+      {"data": {"url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EIXIC?apikey=20a5e85a940ecf0307a76aa74cc2b557",
+        "format":{
+            "property": "historical"
+        }
+      },
+      "mark": {"type":"line", "color":"red"}
+      },
+
+      {"data": {"url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EGDAXI?apikey=20a5e85a940ecf0307a76aa74cc2b557",
+        "format":{
+            "property": "historical"
+        }
+      },
+      "mark": {"type":"line", "color":"green"}
+      },
+
+      {"data": {"url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EDJI?apikey=20a5e85a940ecf0307a76aa74cc2b557",
+        "format":{
+            "property": "historical"
+        }
+      },
+      "mark": {"type":"line", "color":"orange"}
+      },
+      {"data": {"url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EBVSP?apikey=20a5e85a940ecf0307a76aa74cc2b557",
+        "format":{
+            "property": "historical"
+        }
+      },
+      "mark": {"type":"line", "color":"orange"}
+      }
+    ]
+}
