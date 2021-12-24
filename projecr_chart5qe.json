@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+
+    "description": "",
+
+
+    "title": {
+      "text": "",
+      "subtitle":"",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+
+    "height":300,
+    "width":270,
+
+    
+    "encoding": {
+      "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
+      "y": {"field": "value", "type": "quantitative", "title": null, "axis": {"grid": false}},
+      "color":{"field":"Country", "title":null, "legend":{"orient": "top-left"}}
+    },
+    
+
+    "layer": [
+      
+      {"data": {"url": "https://api.stlouisfed.org/fred/series/observations?series_id=DFF&api_key=d965097fd22f504b8127e2c97a1bf669&file_type=json",
+        "format":{
+            "property": "observations"
+        }
+      },
+      "mark": {"type":"line", "color":"green"}
+      },
+
+      {"data": {"url": "https://api.stlouisfed.org/fred/series/observations?series_id=DGS10&api_key=d965097fd22f504b8127e2c97a1bf669&file_type=json",
+        "format":{
+            "property": "observations"
+        }
+      },
+      "mark": {"type":"line", "color":"red"}
+      },
+
+      {"data": {"url": "https://api.stlouisfed.org/fred/series/observations?series_id=SP500&api_key=d965097fd22f504b8127e2c97a1bf669&file_type=json",
+        "format":{
+            "property": "observations"
+        }
+      },
+      "mark": {"type":"line", "color":"blue"}
+      }
+    ]
+}
