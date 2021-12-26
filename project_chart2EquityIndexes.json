@@ -50,7 +50,7 @@
             "property": "historical"
         }
       },
-      "mark": {"type":"line", "color":"orange"}
+      "mark": {"type":"line", "color":"cyan"}
       },
       {"data": {"url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EBVSP?apikey=20a5e85a940ecf0307a76aa74cc2b557",
         "format":{
