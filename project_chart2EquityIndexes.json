@@ -7,7 +7,7 @@
 
     "title": {
       "text": "Global Post-Pandemic Equity Recovery and Rally",
-      "subtitle":"",
+      "subtitle":"Global Equity Index Prices before and after the COVID-19 Pandemic in USD",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -22,7 +22,7 @@
     "encoding": {
       "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
       "y": {"field": "close", "type": "quantitative", "title": null, "axis": {"grid": false}},
-      "color":{"field":"Country", "title":null, "legend":{"orient": "top-left"}}
+      "color":{"field":"", "title":null, "legend":{"orient": "top-left"}}
     },
 
 
@@ -57,7 +57,7 @@
             "property": "historical"
         }
       },
-      "mark": {"type":"line", "color":"orange"}
+      "mark": {"type":"line", "color":"blueviolet"}
       }
     ]
 }
