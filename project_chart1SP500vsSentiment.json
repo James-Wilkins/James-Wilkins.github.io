@@ -13,7 +13,7 @@
   },
 
   "data": {
-    "url": "SP500vsUMCSENT.csv"},
+    "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/SP500vsUMCSENT.csv"},
 
    "repeat": {"layer": ["SP500I", "UMCSENTI"]},
    
