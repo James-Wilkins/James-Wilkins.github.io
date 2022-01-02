@@ -9,14 +9,12 @@
     "anchor": "start",
     "color": "black"
   },
-  "data": {"url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/MICH2.csv"},
-  "height": 300,
-  "width": 320,
-  "mark": {
-    "type": "line",
-    "interpolate": "monotone",
-    "color": "indianred"
+  "data": {
+    "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/MICH2.csv"
   },
+  "height": 270,
+  "width": 320,
+  "mark": {"type": "line", "interpolate": "monotone", "color": "indianred"},
   "encoding": {
     "x": {
       "field": "Date",
@@ -24,9 +22,8 @@
       "axis": {
         "title": "Date",
         "grid": false,
-        "labelOverlap": 10,
+        "labelOverlap": true,
         "ticks": true
-      
       }
     },
     "y": {
