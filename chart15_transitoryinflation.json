@@ -12,8 +12,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/MICH2.csv"
   },
-  "height": 270,
-  "width": 320,
+  "height": 300,
+  "width": 290,
   "mark": {"type": "line", "interpolate": "monotone", "color": "indianred"},
   "encoding": {
     "x": {
