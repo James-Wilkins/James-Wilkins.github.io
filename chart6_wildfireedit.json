@@ -17,7 +17,7 @@
     "x": {
       "field": "Name",
       "type": "nominal",
-      "sort": "-y",
+      "sort": "y",
       "axis": {"title": null, "grid": false, "ticks": false, "labelAngle": 45}
     },
     "y": {
