@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "PE Ratio makes Leaps and Bounds",
+    "subtitle":"Rolling Average of 'Shiller' PE Ratio",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"},
+  
+  "data": {"url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/PE.csv"},
+  "transform": [{
+    "window": [
+      {
+        "field": "PE Ratio",
+        "op": "average",
+        "as": "rolling mean"
+      }
+    ]
+  }],
+  "encoding": {
+    "x": {"field": "DATE", "type": "temporal", "title": "Date", "axis": {"labelOverlap":true}
+    },
+  
+    "y": {"type": "quantitative", "axis": {"title": "PE Ratio"}}
+  },
+  "layer": [
+    {
+      "mark": {"type": "point", "opacity":0.7, "tooltip":true},
+      "encoding": {
+        "y": {"field": "PE Ratio", "title": "PE Ratio"}
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "red", "size": 2},
+      "encoding": {
+        "y": {"field": "PE Ratio", "title": "PE Ratio"}
+      }
+    }
+  ]
+}
