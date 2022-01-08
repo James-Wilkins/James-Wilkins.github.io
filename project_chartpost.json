@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Post",
+  
+     "title": {
+    "text": "Macroeconomic Factor Decomposition Post-Covid",
+    "subtitle":"SP500 against American Consumer Sentiment, 2020==100. Source: FRED",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+
+  
+  "data": {
+    "values": [
+      {"a": "Unemployment", "b": 0.35241183},
+      {"a": "Inflation", "b": 46.49988878},
+      {"a": "Interest Rates", "b": -213.96481695},
+      {"a": "Credit Spreads", "b": -316.92531647},
+      {"a": "Industrial Production", "b": -14.89242295},
+      {"a": "Consumer Sentiment", "b": 0.71387523}
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "a",
+      "type": "nominal",
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelAngle": 0,
+        "labelPadding": 4
+      }
+    },
+    "x": {
+      "field": "b",
+      "title": "Correlation Coefficient",
+      "type": "quantitative",
+      "scale": {"padding": 20},
+      "axis": {
+        "gridColor": {
+          "condition": {"test": "datum.value === 0", "value": "black"},
+          "value": "#ddd"
+        }
+      }
+    }
+  },
+
+
+  "layer": [
+    {"mark": "bar"},
+    {
+      "mark": {
+        "type": "text",
+        "align": {"expr": "datum.b < 0 ? 'right' : 'left'"},
+        "dx": {"expr": "datum.b < 0 ? -2 : 2"}
+      },
+      "encoding": {"text": {"field": "b", "type": "quantitative"}}
+    }
+  ]
+}
