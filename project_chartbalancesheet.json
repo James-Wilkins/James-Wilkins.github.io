@@ -1,16 +1,15 @@
 {
    "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
    "data":{
-      "url":"https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/CBBalanceSheets.csv"
+      "url":"https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/CBBalanceSheetFINAL.csv"
    },
-   "width":400,
-   "height":300,
+   "width":300,
+   "height":280,  
    "encoding":{
       "x":{
          "field":"Date",
          "title":"Date",
-         "type":"temporal",
-         "timeUnit":"yearmonth"
+         "type":"temporal"
       }
    },
    "layer":[
