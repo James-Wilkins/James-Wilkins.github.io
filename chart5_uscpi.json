@@ -11,7 +11,7 @@
   },
   "data": {"url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/USACPIALLMINMEI.csv", "format": {"type": "csv"}},
   "height": 300,
-  "width": 340,
+  "width": 280,
   "mark": {
     "type": "line",
     "point": false,
