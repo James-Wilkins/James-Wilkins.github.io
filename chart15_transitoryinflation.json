@@ -3,18 +3,16 @@
   "description": "",
   "title": {
     "text": "1-Month Inflation Expectations",
-    "subtitle": "1-month inflation expectations of consumers from the University of Michigan (Source: FRED)",
+    "subtitle": "1-month inflation expectations of consumers (Source: FRED)",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
   },
-
-   "data": {
+  "data": {
     "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/MICH2.csv"
   },
-
-   "height": 300,
+  "height": 300,
   "width": 290,
   "mark": {"type": "line", "interpolate": "monotone", "color": "indianred"},
   "encoding": {
@@ -27,14 +25,12 @@
         "labelOverlap": true,
         "ticks": true
       }
-
-     },
+    },
     "y": {
       "field": "MICH",
       "type": "quantitative",
       "title": "Inflation Expectation (%)",
       "axis": {"grid": false}
-
-         }
+    }
   }
 }
