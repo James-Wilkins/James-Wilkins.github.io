@@ -29,32 +29,23 @@
 
     <h2>Have financial markets and the economy become disconnected?'The changing relationship between the macroeconomy and financial markets'</h2>
 
-    <p>Ever since the beginning of the COVID-19 pandemic, there has been an ever-growing disconnect between the real and financial economy. As unemployment soared
-       and GDP fell rapidly, stock markets soared as the Federal Reserve in the USA began to add to their balance sheets, with Financial indexes such as the Russel 2000
-       and SP500 soaring and rallying to record highs.
-        
-       Even at a first glance comparing some macroeconomic variables with US stock markets in the aftermath of COVID 19. This disparity is visually clear.</p>
+    <p>Ever since the beginning of the COVID-19 pandemic, there has been an ever-growing disconnect between the real and financial economy. 
+       As unemployment soared and GDP fell rapidly, stock markets soared as the Federal Reserve in the USA began to add to their balance sheets, 
+       with Financial indexes such as the Russel 2000 and SP500 soaring and rallying to record highs. Even at a first glance comparing some macroeconomic 
+       variables with US stock markets in the aftermath of COVID 19. This disparity is visually clear. The aim of my project was to empirically test for this 
+       disparity in both a visual and statistical sense.</p>
        
-    <h3>A Visual Divergence</h3>
-    
-    
-    
-    
-    
-    
+
     
     <h3>A Test of the Culprit</h3> 
-    
-    
-    
-    
-    
     
     <h3>Investor Impact</h3> 
  
     
+
     
     
+   <h3>A Visual Divergence</h3> 
         
 <div class="chart" id="firstprojectChart">
   <script>
@@ -63,16 +54,25 @@
   </script>
 </div>
         
-   <p>In this graph, I have Indexed the SP500 and the University of Michigan Consumer Sentiment Index to 100 in a local csv file. As we can see from April
+   <p>In this graph, I have Indexed the SP500 and the University of Michigan Consumer Sentiment Index to 100 in a local csv file As we can see from April
       there is a clear divergence in the indicators. Although they both drop in the wake of the pandemic, while consumer sentiment continues to slump, the
-      SP500 recovers rapidly and begins to rally to all-time highs. Alternatively, consumer sentiment drops to levels not seen since 2011.</p>
-       
+      SP500 recovers rapidly and begins to rally to all-time highs. Alternatively, consumer sentiment drops to levels not seen since 2011. Ideally I would
+      have automated this data using the 'FRED' API, however I needed to index the data in excel in order to create a visually interpretable disparity.</p>
+      
+      I should not that much of my representation of the 'financial economy' is based on the SP500. I made this choice as its revenue exposure is the most 
+      global of all equity indexes. Additionally, it is highly liquid and hence its data is generally accurate does not require much cleaning.
+    
 <div class="chart" id="secondprojectChart">
   <script>
     var myprojectChart2 = "project_chart2EquityIndexes.json";
     vegaEmbed('#secondprojectChart', myprojectChart2);
   </script>
 </div>
+   
+    
+   <p>Above, we can also see that this rally is not solely a U.S centric one. Here I have used an API to display the post-covid rally of four other global equity
+      indexes.
+      
     
 <div class="chart" id="thirdprojectChart">
   <script>
@@ -80,6 +80,11 @@
     vegaEmbed('#thirdprojectChart', myprojectChart3);
   </script>
 </div>
+    
+ 
+    
+    
+    
     
 <div class="chart" id="fourthprojectChart">
   <script>
