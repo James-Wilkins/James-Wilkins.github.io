@@ -1,67 +1,90 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Post",
-  
-    "title": {
-    "text": "Macroeconomic Factor Decomposition Post-Covid",
-    "subtitle":"SP500 against American Consumer Sentiment, 2020==100. Source: FRED",
-    "subtitleFontStyle":"italic",
-    "subtitleFontSize":10,
-    "anchor": "start",
-    "color": "black"
-  },
-
-
-  
-  "data": {
-    "values": [
-      {"a": "Unemployment", "b": 0.35241183},
-      {"a": "Inflation (CPI)", "b": 46.49988878},
-      {"a": "Interest Rates", "b": -213.96481695},
-      {"a": "Credit Spreads", "b": -316.92531647},
-      {"a": "Industrial Production", "b": -14.89242295},
-      {"a": "Consumer Sentiment", "b": 0.71387523}
-    ]
-  },
-
-  "height": 300,
-  "width": 400,
-  "encoding": {
-    "y": {
-      "field": "a",
-      "title": "Macroeconomic Factor",
-      "type": "nominal",
-      "axis": {
-        "domain": false,
-        "ticks": false,
-        "labelAngle": 0,
-        "labelPadding": 4
-      }
-    },
-    "x": {
-      "field": "b",
-      "title": "Correlation Coefficient",
-      "type": "quantitative",
-      "scale": {"padding": 30,"domainMin":-350,"domainMax":350},
-      "axis": {
-        "gridColor": {
-          "condition": {"test": "datum.value === 0", "value": "black"},
-          "value": "#ddd"
-        }
-      }
-    }
-  },
-
-
-  "layer": [
-    {"mark": "bar"},
-    {
-      "mark": {
-        "type": "text",
-        "align": {"expr": "datum.b < 0 ? 'right' : 'left'"},
-        "dx": {"expr": "datum.b < 0 ? -2 : 2"}
+   "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
+   "description":"Post",
+   "title":{
+      "text":"Macroeconomic Factor Decomposition Post-Covid",
+      "subtitle":"Macroeconomic Factor Decomposition Regression Coefficients (Data Originially from FRED)",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor":"start",
+      "color":"black"
+   },
+   "data":{
+      "values":[
+         {
+            "a":"Unemployment Rate(x10)(%)",
+            "b":3.5241183
+         },
+         {
+            "a":"Inflation (CPI)",
+            "b":46.49988878
+         },
+         {
+            "a":"Interest Rates(%)",
+            "b":-213.96481695
+         },
+         {
+            "a":"Credit Spreads(%)",
+            "b":-316.92531647
+         },
+         {
+            "a":"Industrial Production",
+            "b":-14.89242295
+         },
+         {
+            "a":"Consumer Sentiment",
+            "b":0.71387523
+         }
+      ]
+   },
+   "height":300,
+   "width":280,
+   "encoding":{
+      "y":{
+         "field":"a",
+         "title":"Macroeconomic Factor",
+         "type":"nominal",
+         "axis":{
+            "domain":false,
+            "ticks":false,
+            "labelAngle":0,
+            "labelPadding":4
+         }
       },
-      "encoding": {"text": {"field": "b", "type": "quantitative"}}
-    }
-  ]
+      "x":{
+         "field":"b",
+         "title":"Correlation Coefficient",
+         "type":"quantitative",
+         "scale":{
+            "padding":30,
+            "domainMin":-350,
+            "domainMax":350
+         },
+         "axis":{
+            "gridColor":{
+               "condition":{
+                  "test":"datum.value === 0",
+                  "value":"black"
+               },
+               "value":"#ddd"
+            }
+         }
+      }
+   },
+   "layer":[
+      {
+         "mark":"bar",
+         "encoding":{
+            "tooltip":[
+               {
+                  "field":"a"
+               },
+               {
+                  "field":"b",
+                  "type":"quantitative"
+               }
+            ]
+         }
+      }
+   ]
 }
