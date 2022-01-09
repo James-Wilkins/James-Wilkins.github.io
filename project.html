@@ -36,10 +36,9 @@
        disparity in both a visual and statistical sense.</p>
        
 
+   
     
-    <h3>A Test of the Culprit</h3> 
-    
-    <h3>Investor Impact</h3> 
+
  
     
 
@@ -59,8 +58,8 @@
       SP500 recovers rapidly and begins to rally to all-time highs. Alternatively, consumer sentiment drops to levels not seen since 2011. Ideally I would
       have automated this data using the 'FRED' API, however I needed to index the data in excel in order to create a visually interpretable disparity.</p>
       
-      I should not that much of my representation of the 'financial economy' is based on the SP500. I made this choice as its revenue exposure is the most 
-      global of all equity indexes. Additionally, it is highly liquid and hence its data is generally accurate does not require much cleaning.
+   <p>I should note that much of my representation of the 'financial economy' is based on the SP500. I made this choice as its revenue exposure is the most 
+      global of all equity indexes. Additionally, it is highly liquid and hence its data is generally accurate does not require much cleaning.</p>
     
 <div class="chart" id="secondprojectChart">
   <script>
@@ -71,8 +70,13 @@
    
     
    <p>Above, we can also see that this rally is not solely a U.S centric one. Here I have used an API to display the post-covid rally of four other global equity
-      indexes.
-      
+      indexes.</p>
+  
+    
+    
+ <h3>A Sign of Overvaluation</h3>    
+    
+    
     
 <div class="chart" id="thirdprojectChart">
   <script>
@@ -81,17 +85,30 @@
   </script>
 </div>
     
+
+ <p>Above I have Web Scraped the 'Multpl' Website for the month by month Shiller PE Ratio data to test for an overvalued market. The pandas library achieved this
+  with ease, and i was able to sort the data from old to new. I then downloaded the csv to my repository</p>
+  
+    
+  
+    
+    
+<h3>A Test of the Culprit</h3>     
+    
+    
+    
+    
+<p>In these charts I have decided to empirically test     
  
-    
-    
-    
-    
 <div class="chart" id="fourthprojectChart">
   <script>
     var myprojectChart4 = "project_chartqe.json";
     vegaEmbed('#fourthprojectChart', myprojectChart4);
   </script>
 </div>
+    
+    
+    
  
 <div class="chart" id="fifthprojectChart">
   <script>
@@ -100,6 +117,9 @@
   </script>
 </div>
     
+    
+
+    
 <div class="chart" id="sixthprojectChart">
   <script>
     var myprojectChart6 = "project_chartCBRegression";
@@ -107,6 +127,11 @@
   </script>
 </div>
     
+    
+  
+    
+     <h3>Investor Impact</h3>    
+
 
 <div class="chart" id="seventhprojectChart">
   <script>
