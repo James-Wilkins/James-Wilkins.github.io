@@ -2,11 +2,13 @@
 
 body{
     background-color: rgb(72, 85, 100);
+    text-align: center;
 }
 
-h1, h3, p{
+h1, h2, h3, p{
     color:rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
+    
 }
 
 .chart{
