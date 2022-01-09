@@ -1,63 +1,59 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
-
-    "description": "Chart that uses repeated layers to make multiple calls to an API",
-
-
-    "title": {
-      "text": "Global Post-Pandemic Equity Recovery and Rally",
-      "subtitle":"Global Equity Index Prices before and after the COVID-19 Pandemic in USD",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart that uses repeated layers to make multiple calls to an API",
+  "title": {
+    "text": "Global Post-Pandemic Equity Recovery and Rally",
+    "subtitle": "Global Equity Index Prices before and after the COVID-19 Pandemic in USD",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "height": 300,
+  "width": 280,
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Date",
+      "axis": {"grid": false}
     },
-
-
-    "height":300,
-    "width":270,
-
-    
-    "encoding": {
-      "x": {"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
-      "y": {"field": "close", "type": "quantitative", "title": null, "axis": {"grid": false}},
-      "color":{"field":"", "title":null, "legend":{"orient": "top-left"}}
+    "y": {
+      "field": "close",
+      "type": "quantitative",
+      "title": "Price($)",
+      "axis": {"grid": false}
     },
-
-
-
-    "layer": [
-      
-      {"data": {"url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EIXIC?apikey=20a5e85a940ecf0307a76aa74cc2b557",
-        "format":{
-            "property": "historical"
-        }
+    "color": {"field": "", "title": null, "legend": {"orient": "top-right"}}
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EIXIC?apikey=20a5e85a940ecf0307a76aa74cc2b557",
+        "format": {"property": "historical"}
       },
-      "mark": {"type":"line", "color":"red"}
+      "mark": {"type": "line", "color": "red"}
+    },
+    {
+      "data": {
+        "url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EGDAXI?apikey=20a5e85a940ecf0307a76aa74cc2b557",
+        "format": {"property": "historical"}
       },
-
-      {"data": {"url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EGDAXI?apikey=20a5e85a940ecf0307a76aa74cc2b557",
-        "format":{
-            "property": "historical"
-        }
+      "mark": {"type": "line", "color": "green"}
+    },
+    {
+      "data": {
+        "url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EDJI?apikey=20a5e85a940ecf0307a76aa74cc2b557",
+        "format": {"property": "historical"}
       },
-      "mark": {"type":"line", "color":"green"}
+      "mark": {"type": "line", "color": "cyan"}
+    },
+    {
+      "data": {
+        "url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EBVSP?apikey=20a5e85a940ecf0307a76aa74cc2b557",
+        "format": {"property": "historical"}
       },
-
-      {"data": {"url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EDJI?apikey=20a5e85a940ecf0307a76aa74cc2b557",
-        "format":{
-            "property": "historical"
-        }
-      },
-      "mark": {"type":"line", "color":"cyan"}
-      },
-      {"data": {"url": "https://financialmodelingprep.com/api/v3/historical-price-full/index/%5EBVSP?apikey=20a5e85a940ecf0307a76aa74cc2b557",
-        "format":{
-            "property": "historical"
-        }
-      },
-      "mark": {"type":"line", "color":"blueviolet"}
-      }
-    ]
+      "mark": {"type": "line", "color": "blueviolet"}
+    }
+  ]
 }
