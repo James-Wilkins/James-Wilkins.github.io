@@ -37,12 +37,7 @@
        
 
    
-    
-
- 
-    
-
-    
+   
     
    <h3>A Visual Divergence</h3> 
         
@@ -69,8 +64,8 @@
 </div>
    
     
-   <p>Above, we can also see that this rally is not solely a U.S centric one. Here I have used an API to display the post-covid rally of four other global equity
-      indexes.</p>
+   <p>Above, we can also see that this rally is not solely a U.S centric one. Here I have used an API to display the post-covid rally of four other equity
+      indexes. The Nasdaq(USA), Dow Jones(USA), DAX(Germany) and Bovespa(Brazil).   </p>
   
     
     
@@ -87,7 +82,7 @@
     
 
  <p>Above I have Web Scraped the 'Multpl' Website for the month by month Shiller PE Ratio data to test for an overvalued market. The pandas library achieved this
-  with ease, and i was able to sort the data from old to new. I then downloaded the csv to my repository</p>
+  with ease, and i was able to sort the data from old to new. I then downloaded the csv to my repository.</p>
   
     
  <a href="https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/ShillerScrape.ipynb">Notebook Code</a> 
@@ -97,18 +92,21 @@
     
     
     
-<p>In these charts I have decided to empirically test one of the main hypotheses for the cause of this divergence; Central Banks. The following charts display...
-    Ideally the data in these charts would have been automated and had come from.</p>
-    
-    
+<p>In these charts I have decided to empirically test one of the main hypotheses for the cause of this divergence; Central Banks. Many believe that the divergence
+   between the real and financial economy has been driven by the quantitative easing by central banks such as the Federal Reserve and hence equities have become
+   overvalued. The chart below shows the increasing balance sheet of central banks in recent years as well as over COVID.
+   Ideally the data in these charts would have been automated and had come from.</p>
  
- 
+    
 <div class="chart" id="fourthprojectChart">
   <script>
     var myprojectChart4 = "project_chartbalancesheet.json";
     vegaEmbed('#fourthprojectChart', myprojectChart4);
   </script>
 </div>
+    
+<p>Ideally I would have automated the chart above, however </p> 
+    
     
 <div class="chart" id="fifthprojectChart">
   <script>
@@ -137,14 +135,8 @@
     
     <p>My final two charts were inspired by a concept called ‘Macroeconomic Class Factor Models’, that use statistical analysis to decompose macroeconomic 
        systematic risk. Using a multivarible regression using the sklearn toolkit library in a Colab Notebook in Python, I regressed macroeconomic factors. 
-       I kept the number of factors limited in order to avoid the issue of collinearity. A significiant issue i faced was that ... 
-       It was not so important to compare
-       the attribution of the factors in one period, but moreso how they changed before and after COVID.</p>
-    
-    
-    
-    <a href="https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/PreCovidRegression.ipynb">Notebook Code for Pre Covid</a>
-    <a href="https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/PostCovidRegression.ipynb">Notebook Code for Post Covid</a>
+       I kept the number of factors limited in order to avoid the issue of collinearity.</p>
+   
 
 
 <div class="chart" id="seventhprojectChart">
@@ -162,7 +154,15 @@
 </div>
 
        
-
+   <p>There were some significant challenges in the above visualistation. Due to the way that some of these macroeconomic factors, their correlation 
+      coefficients were highly varied in magnitude meaning that the data was extremely skewed. If the magnitudes were all positive I could have used
+      a logarithmic scale however, this was not possible due to having negative coefficients as well as positive ones. Although it should be said that 
+      comparing the coefficients at one point in time was not so much the point of this visualisation but rather to see how they had changed prior to 
+      Covid and post Covid. And visually it is clear that they have. For example a decrease in unemployment was strongly associated with an increase i
+      n the SP500 prior to Covid, but now that relationship has decreased to near 0.
+       
+    <a href="https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/PreCovidRegression.ipynb">Notebook Code for Pre Covid</a>
+    <a href="https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/PostCovidRegression.ipynb">Notebook Code for Post Covid</a>
     
        
 
