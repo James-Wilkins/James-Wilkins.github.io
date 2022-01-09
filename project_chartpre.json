@@ -72,7 +72,18 @@
    },
    "layer":[
       {
-         "mark":"bar"
+         "mark":"bar",
+         "encoding":{
+            "tooltip":[
+               {
+                  "field":"a"
+               },
+               {
+                  "field":"b",
+                  "type":"quantitative"
+               }
+            ]
+         }
       }
    ]
 }
