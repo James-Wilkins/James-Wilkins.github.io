@@ -2,40 +2,38 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "PE Ratio makes Leaps and Bounds",
-    "subtitle":"Rolling Average of 'Shiller' PE Ratio",
-    "subtitleFontStyle":"italic",
-    "subtitleFontSize":10,
+    "subtitle": "Rolling Average of 'Shiller' PE Ratio",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
     "anchor": "start",
-    "color": "black"},
-  
-  "data": {"url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/ShillerScrape.csv"},
-  "transform": [{
-    "window": [
-      {
-        "field": "Value",
-        "op": "average",
-        "as": "rolling mean"
-      }
-    ]
-  }],
+    "color": "black"
+
+  },
+  "height": 300,
+  "width": 280,
+  "data": {
+    "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/ShillerScrape.csv"
+  },
+  "transform": [
+    {"window": [{"field": "Value", "op": "average", "as": "rolling mean"}]}
+  ],
   "encoding": {
-    "x": {"field": "Date", "type": "temporal", "title": "Date", "axis": {"labelOverlap":true}
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "title": "Date",
+      "axis": {"labelOverlap": true}
     },
-  
     "y": {"type": "quantitative", "axis": {"title": "PE Ratio"}}
   },
   "layer": [
     {
-      "mark": {"type": "point", "opacity":0.7, "tooltip":true},
-      "encoding": {
-        "y": {"field": "Value", "title": "PE Ratio"}
-      }
+      "mark": {"type": "point", "opacity": 0.7, "tooltip": true},
+      "encoding": {"y": {"field": "Value", "title": "PE Ratio"}}
     },
     {
       "mark": {"type": "line", "color": "red", "size": 2},
-      "encoding": {
-        "y": {"field": "Value", "title": "PE Ratio"}
-      }
+      "encoding": {"y": {"field": "Value", "title": "PE Ratio"}}
     }
   ]
 }
