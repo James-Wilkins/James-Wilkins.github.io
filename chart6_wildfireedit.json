@@ -10,8 +10,8 @@
     "color": "black"
   },
   "data": {"url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/wildfireedit.csv"},
-  "height": 400,
-  "width": 400,
+  "height": 300,
+  "width": 280,
   "mark": {"type": "bar", "color": "#86d0bb"},
   "encoding": {
     "x": {
