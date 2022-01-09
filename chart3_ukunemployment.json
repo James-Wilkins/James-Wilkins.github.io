@@ -17,7 +17,7 @@
       "format": {"type": "json", "property": "months"}
     },
     "height": 300,
-    "width": 345,
+    "width": 280,
     "mark": {
       "type": "line",
       "point": false,
