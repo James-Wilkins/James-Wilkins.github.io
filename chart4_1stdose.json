@@ -1,44 +1,43 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  
-    "description": "1st Covid Vaccine",
-  
-     "title": {
-      "text": "1st Covid Vaccine",
-      "subtitle":"Cumulative Number of People with 1st Covid Vaccine in the UK",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
-    },
-    
-    "data": {
-      "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=overview&metric=cumPeopleVaccinatedFirstDoseByPublishDate&format=csv",
-      "format": {"type": "csv"}
-    },
-    "height": 300,
-    "width": 280,
-    "mark": {
-      "type": "area",
-      "point": false,
-      "interpolate": "monotone",
-      "color": "palevioletred"
-    },
-    "encoding": {
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "axis": {
-          "title": null,
-          "grid": false,
-          "labelSeparation": 10,
-          "ticks": false
-        }
-      },
-      "y": {
-        "field": "cumPeopleVaccinatedFirstDoseByPublishDate",
-        "type": "quantitative",
-        "title": "",
-        "axis": {"grid": false}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "1st Covid Vaccine",
+  "title": {
+    "text": "1st Covid Vaccine",
+    "subtitle": "Cumulative Number of People with 1st Covid Vaccine in the UK",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=overview&metric=cumPeopleVaccinatedFirstDoseByPublishDate&format=csv",
+    "format": {"type": "csv"}
+  },
+  "height": 300,
+  "width": 280,
+  "mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "monotone",
+    "color": "palevioletred"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Date",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "ticks": false
       }
-    }}
+    },
+    "y": {
+      "field": "cumPeopleVaccinatedFirstDoseByPublishDate",
+      "type": "quantitative",
+      "title": "No. of Vaccinated People",
+      "axis": {"grid": false}
+    }
+  }
+}
