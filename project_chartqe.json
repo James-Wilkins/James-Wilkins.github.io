@@ -7,12 +7,8 @@
     "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
-    
-
-
   },
-
-"height": 300,
+  "height": 300,
   "width": 280,
   "data": {
     "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/QuantitativeEasing.csv"
@@ -22,20 +18,21 @@
       "mark": "line",
       "encoding": {
         "x": {"field": "Date", "type": "temporal"},
-        "y": {"field": "SP500", "type": "quantitative", "axis": {"grid": false}}
+        "y": {"field": "SP500", "title":"SP500 ($)", "type": "quantitative", "axis": {"grid": false}}
       }
     },
     {
-      "mark": {"type":"line","interpolate":"basis", "strokeWidth":0.6},
+      "mark": {"type": "line", "interpolate": "monotone", "strokeWidth": 0.9},
       "encoding": {
         "x": {"field": "Date", "type": "temporal"},
         "y": {
-          "field": "DFF",
+          "field": "DGS10",
+          "title": "10-Year Yields",
           "type": "quantitative",
           "axis": {"grid": false},
           "scale": {"zero": false}
         },
-        "color": {"value": "green"}
+        "color": {"value": "firebrick"}
       }
     }
   ],
