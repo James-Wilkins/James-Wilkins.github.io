@@ -12,7 +12,7 @@
     "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/SPCB.csv"
   },
   "height": 300,
-  "width": 270,
+  "width": 350,
   "layer": [
     {
       "mark": {"type": "point", "filled": true, "clip": true},
