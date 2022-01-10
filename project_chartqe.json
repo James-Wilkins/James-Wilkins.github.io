@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.2.0.json",
   "title": {
     "text": "Central Banks, the Main Culprit?",
-    "subtitle": "Comparison of Federal Funds Rate with SP500",
+    "subtitle": "Comparison of Federal Funds Rate with SP500 (Source: FRED)",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -18,7 +18,12 @@
       "mark": "line",
       "encoding": {
         "x": {"field": "Date", "type": "temporal"},
-        "y": {"field": "SP500", "title":"SP500 ($)", "type": "quantitative", "axis": {"grid": false}}
+        "y": {
+          "field": "SP500",
+          "title": "SP500 ($)",
+          "type": "quantitative",
+          "axis": {"grid": false}
+        }
       }
     },
     {
@@ -27,7 +32,7 @@
         "x": {"field": "Date", "type": "temporal"},
         "y": {
           "field": "DGS10",
-          "title": "10-Year Yields",
+          "title": "10-Year Yields (%)",
           "type": "quantitative",
           "axis": {"grid": false},
           "scale": {"zero": false}
