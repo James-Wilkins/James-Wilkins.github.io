@@ -136,8 +136,8 @@
     
     
     <p>My final two charts were inspired by a concept called ‘Macroeconomic Class Factor Models’, that use statistical analysis to decompose macroeconomic 
-       systematic risk. Using a multivarible regression using the sklearn toolkit library in a Colab Notebook in Python, I regressed macroeconomic factors. 
-       I kept the number of factors limited in order to avoid the issue of collinearity.</p>
+       systematic risk. Using a multivarible regression using the sklearn toolkit library in a Colab Notebook in Python, I regressed macroeconomic factors
+       against the SP500 using a pre-covid and post-covid dataset. I kept the number of factors limited in order to avoid the issue of collinearity.</p>
    
     
     <p>Pre-Covid</p>
@@ -160,12 +160,12 @@
 </div>
 
        
-   <p>There were some significant challenges in the above visualistation. Due to the way that some of these macroeconomic factors, their correlation 
-      coefficients were highly varied in magnitude meaning that the data was extremely skewed. If the magnitudes were all positive I could have used
-      a logarithmic scale however, this was not possible due to having negative coefficients as well as positive ones. Although it should be said that 
-      comparing the coefficients at one point in time was not so much the point of this visualisation but rather to see how they had changed prior to 
-      Covid and post Covid. And visually it is clear that they have. For example a decrease in unemployment was strongly associated with an increase i
-      n the SP500 prior to Covid, but now that relationship has decreased to near 0.</p>
+   <p>There were some significant challenges in the above visualistation. Due to the way that some of these macroeconomic factors are measured such as
+      consumer sentiment, their correlation  coefficients were highly varied in magnitude meaning that the data was extremely skewed. If the magnitudes
+      were all positive I could have used a logarithmic scale however, this was not possible due to having negative coefficients as well as positive ones.
+      Although it should be said that comparing the coefficients at one point in time was not so much the point of this visualisation but rather to see 
+      how they had changed prior to Covid and post Covid. And visually it is clear that they have. For example a decrease in the unemployment rate was 
+      strongly associated with an increase in the SP500 prior to Covid, but now that relationship has decreased to near 0.</p>
        
   <p><a href="https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/PreCovidRegression.ipynb">Notebook Code for Pre Covid</a>
     <a href="https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/PostCovidRegression.ipynb">Notebook Code for Post Covid</a></p>
