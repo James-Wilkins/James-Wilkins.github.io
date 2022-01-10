@@ -1,31 +1,41 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/SPCB.csv"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/SPCB.csv"
+  },
+  "height": 300,
+  "width": 270,
   "layer": [
     {
       "mark": {"type": "point", "filled": true, "clip": true},
       "encoding": {
-        "x": {"field": "USA", "type": "quantitative", "title": "Federal Reserve Assets (Millions of Dollars)"},
-        "y": {"field": "SP500", "type": "quantitative","title": "SP500 Price ($)"}
+        "x": {
+          "field": "USA",
+          "type": "quantitative",
+          "title": "Federal Reserve Assets (Millions of Dollars)"
+        },
+        "y": {
+          "field": "SP500",
+          "type": "quantitative",
+          "title": "SP500 Price ($)"
+        }
       }
     },
     {
-      "mark": {"type": "line", "color": "orange", "opacity":0.7, "clip": true},
-      "transform": [
-        {"regression": "USA", "on": "SP500"}
-      ],
+      "mark": {"type": "line", "color": "orange", "opacity": 0.7, "clip": true},
+      "transform": [{"regression": "USA", "on": "SP500"}],
       "encoding": {
-        "x": {"field": "USA", "type": "quantitative", "scale":{"domainMin" : 2000000}},
+        "x": {
+          "field": "USA",
+          "type": "quantitative",
+          "scale": {"domainMin": 2000000}
+        },
         "y": {"field": "SP500", "type": "quantitative"}
       }
     },
     {
       "transform": [
-        {
-          "regression": "USA",
-          "on": "SP500",
-          "params": true
-        },
+        {"regression": "USA", "on": "SP500", "params": true},
         {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
       ],
       "mark": {
