@@ -31,8 +31,8 @@
 
     <p>Ever since the beginning of the COVID-19 pandemic, there has been an ever-growing disconnect between the real and financial economy. 
        As unemployment soared and GDP fell rapidly, stock markets soared as the Federal Reserve in the USA began to add to their balance sheets, 
-       with Financial indexes such as the Russel 2000 and SP500 soaring and rallying to record highs. Even at a first glance comparing some macroeconomic 
-       variables with US stock markets in the aftermath of COVID 19. This disparity is visually clear. The aim of my project was to empirically test for this 
+       with Financial indexes such as the Russell 2000 and SP500 soaring and rallying to record highs. Even at a first glance comparing some macroeconomic 
+       variables with US stock markets in the aftermath of COVID 19. This disparity is visually clear. This project aimed to empirically test for this 
        disparity in both a visual and statistical sense.</p>
        
 
@@ -50,7 +50,7 @@
    <p>In this graph, I have Indexed the SP500 and the University of Michigan Consumer Sentiment Index to 100 in a local csv file As we can see from April
       there is a clear divergence in the indicators. Although they both drop in the wake of the pandemic, while consumer sentiment continues to slump, the
       SP500 recovers rapidly and begins to rally to all-time highs. Alternatively, consumer sentiment drops to levels not seen since 2011. Ideally I would
-      have automated this data using the 'FRED' API, however I needed to index the data in excel in order to create a visually interpretable disparity.</p>
+      have automated this data using the 'FRED' API, however, I needed to index the data in excel in order to create a visually interpretable disparity.</p>
       
    <p>I should note that much of my representation of the 'financial economy' is based on the SP500. I made this choice as its revenue exposure is the most 
       global of all equity indexes. Additionally, it is highly liquid and hence its data is generally accurate does not require much cleaning.</p>
@@ -66,7 +66,7 @@
    <p>Above, we can also see that this rally is not solely a U.S centric one. Here I have used an API to display the post-covid rally of four other equity
       indexes. The Nasdaq(USA), Dow Jones(USA), DAX(Germany) and Bovespa(Brazil). Annoyingly, because of the way the json data was formatted, I could not
       implement a key specifying which index each line referred to as it was not mentioned in the data, only in the url of the api request. Additionally, the
-      data for each index came from seperate API links and hence i had to format it as such. For the readers reference; Purple: Bovespa ,
+      data for each index came from separate API links and hence i had to format it as such. For the readers reference; Purple: Bovespa ,
       Cyan:Dow Jones, Green:DAX, Red:Nasdaq.</p>
   
     
@@ -87,7 +87,7 @@
   with ease, and i was able to sort the data from old to new. I then downloaded the csv to my repository.</p>
   
     
- <a href="https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/ShillerScrape.ipynb">Notebook Code</a> 
+ <p><ahref="https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/ShillerScrape.ipynb">Notebook Code</a></p>
     
     
 <h3>A Test of the Culprit</h3>     
@@ -106,8 +106,8 @@
   </script>
 </div>
     
-<p>Ideally I would have automated the chart above, however Data on Global Central. Additionally the way it is measured and reported in different countries
-   is highly nuanced and therefore it made more sense to collate it into a csv file.</p> 
+<p>Ideally, I would have automated the chart above, however Data on Global Central Banks assets is measured in different ways and at different time
+  frequencies therefore it made more sense to collate it into a csv file.</p> 
     
     
 <div class="chart" id="fifthprojectChart">
@@ -117,7 +117,8 @@
   </script>
 </div>
     
-<p>The chart above shows</p> 
+<p>The chart above is tri-axis chart that demonstrates the relationship between SP500 and 10 Year Treasury Notes, the latter of which acting as
+   a proxy for the U.S QE Programme.</p> 
     
 <div class="chart" id="sixthprojectChart">
   <script>
@@ -126,13 +127,12 @@
   </script>
 </div>
     
-<p>The chart above shows</p>    
+<p>The linear regression above produced a relatively high R-squared value of 0.77, however is by no means a proof of causation. </p>    
   
 
  <h3>Investor Impact</h3> 
     
-    
-    
+
     
     
     <p>My final two charts were inspired by a concept called ‘Macroeconomic Class Factor Models’, that use statistical analysis to decompose macroeconomic 
@@ -180,7 +180,7 @@
        and financial economy. My regressions demonstrate a clearly declining relationshp between macroeconomic variables and the equity valuation of the
        largest 500 companies in the world. However, my discussion of central banks should in no way be taken at face value, in terms of its causal relationship.
        After COVID, it is likely that structural economic changes have taken place and therefore, it would be prudent to assess a variety of possible causes
-       of this 'divergence' and to ensure statistical robustness.
+       of this 'divergence' and to ensure statistical robustness.</p>
         
       
        
