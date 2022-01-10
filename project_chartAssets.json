@@ -1,5 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Central Bank Balance Sheet",
+    "subtitle": "Total Assets on Central Bank Balance Sheets (Source:FRED, Bank of England)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/CBBalanceSheetFINAL.csv"
   },
