@@ -1,46 +1,38 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-      "title": {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.2.0.json",
+  "title": {
     "text": "Central Banks, the Main Culprit?",
-    "subtitle":". Data Source: FRED",
-    "subtitleFontStyle":"italic",
-    "subtitleFontSize":10,
+    "subtitle": "Comparison of Federal Funds Rate with SP500",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
-  },
-  
+    
 
-  "data": {"url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/QuantitativeEasing.csv"},
+
+  },
+
+"height": 300,
+  "width": 280,
+  "data": {
+    "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/QuantitativeEasing.csv"
+  },
   "layer": [
     {
       "mark": "line",
       "encoding": {
-        "x": {
-          "field": "Date",
-          "type": "temporal"
-        },
-        "y": {
-          "field": "SP500",
-          "type": "quantitative",
-          "axis": {
-          "grid": false
-          }
-        }
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "SP500", "type": "quantitative", "axis": {"grid": false}}
       }
     },
     {
-      "mark": "line",
+      "mark": {"type":"line","interpolate":"basis", "strokeWidth":0.6},
       "encoding": {
-        "x": {
-          "field": "Date",
-          "type": "temporal"
-        },
+        "x": {"field": "Date", "type": "temporal"},
         "y": {
-          "field": "DGS10",
+          "field": "DFF",
           "type": "quantitative",
-          "axis": {
-            "grid": false
-          },
+          "axis": {"grid": false},
           "scale": {"zero": false}
         },
         "color": {"value": "green"}
