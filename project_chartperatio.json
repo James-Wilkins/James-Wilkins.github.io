@@ -7,7 +7,6 @@
     "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
-
   },
   "height": 350,
   "width": 350,
@@ -28,11 +27,11 @@
   },
   "layer": [
     {
-      "mark": {"type": "point", "opacity": 0.7, "tooltip": true},
+      "mark": {"type": "point", "opacity": 0.8, "tooltip": true, "color":"red","size":20},
       "encoding": {"y": {"field": "Value", "title": "PE Ratio"}}
     },
     {
-      "mark": {"type": "line", "color": "red", "size": 2},
+      "mark": {"type": "line", "color": "blue", "size": 2},
       "encoding": {"y": {"field": "Value", "title": "PE Ratio"}}
     }
   ]
