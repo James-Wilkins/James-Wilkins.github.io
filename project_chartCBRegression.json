@@ -1,5 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Regression of Fed Balance Sheet on SP500",
+    "subtitle": "Linear Regression (Data Sourced from Fred & The Federal Reserve)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/James-Wilkins/James-Wilkins.github.io/main/SPCB.csv"
   },
