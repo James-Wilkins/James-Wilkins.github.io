@@ -10,7 +10,7 @@
     "color": "black"
   },
   "height": 300,
-  "width": 250,
+  "width": 500,
   "data": {
     "values": [
       {"a": "Unemployment Rate(%)", "b": -70.85308174},
