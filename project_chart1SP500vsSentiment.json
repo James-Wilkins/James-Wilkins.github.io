@@ -14,8 +14,8 @@
   },
   "repeat": {"layer": ["SP500I", "UMCSENTI"]},
   "spec": {
-    "height": 300,
-    "width": 400,
+    "height": 350,
+    "width": 350,
     "mark": {"type": "line", "strokeWidth": 2},
     "encoding": {
       "x": {"field": "Date", "type": "temporal"},
